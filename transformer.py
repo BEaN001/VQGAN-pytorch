@@ -113,7 +113,8 @@ class VQGANTransformer(nn.Module):
         log["half_sample"] = half_sample
         log["full_sample"] = full_sample
 
-        return log, torch.concat((x, x_rec, half_sample, full_sample))
+        # return log, torch.concat((x, x_rec, half_sample, full_sample))
+        return log, torch.cat((x, x_rec, half_sample, full_sample))
 
 
 
